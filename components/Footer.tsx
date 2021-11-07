@@ -4,6 +4,6 @@ export const Footer: React.FC<{
   isDarkMode: boolean
 }> = ({ isDarkMode }) => {
   return (
-    <div />
+    <div/>
   )
 }
