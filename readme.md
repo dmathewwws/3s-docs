@@ -2,9 +2,8 @@
 
 todos
 - fix styling at top of page
-- get search to work
-- get sitemap + robots.txt files to work
 - get footer to be static on all pages
+- change items in public folder, including favicon
 
 ## Contribute
 
