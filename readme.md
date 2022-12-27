@@ -11,6 +11,6 @@ The easiest way to contribute to the SSS standard is to add a comment on the [No
 
 Be sure to read through Dave Winer's [rules for standards-makers](http://this.how/standards/), it's contains helpful best practices for creating useful standards.
 
-## Website
+## Thanks
 
-This Notion -> website generator is a fork of [transitive-bullshit/nextjs-notion-starter-kit](https://github.com/transitive-bullshit/nextjs-notion-starter-kit)
+This website is a fork of [transitive-bullshit/nextjs-notion-starter-kit](https://github.com/transitive-bullshit/nextjs-notion-starter-kit)
