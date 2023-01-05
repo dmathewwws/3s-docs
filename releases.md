@@ -9,3 +9,7 @@ Changes:
   - Fix crash for ImageVariants
   - Removed Github banner
   - Open Source credit in footer
+
+#1.0.2 (2023-01-05)
+Changes:
+  - cache busting
