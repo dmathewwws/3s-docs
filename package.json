@@ -1,6 +1,6 @@
 {
   "name": "nextjs-notion-starter-kit",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "private": true,
   "description": "The perfect starter kit for building beautiful websites with Next.js and Notion.",
   "author": "Travis Fischer <travis@transitivebullsh.it>",
