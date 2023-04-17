@@ -45,7 +45,7 @@ export default siteConfig({
   // example:
   //
   pageUrlOverrides: {
-    '/comicseries/date': 'df934cbbe3d643ec80ec68fe20edbcfe',
+    '/comicseries-date': 'df934cbbe3d643ec80ec68fe20edbcfe',
   },
   // pageUrlOverrides: null,
 
