@@ -46,6 +46,16 @@ export default siteConfig({
   //
   pageUrlOverrides: {
     '/comicseries-date': 'df934cbbe3d643ec80ec68fe20edbcfe',
+    '/comicseries-genre': '5cbf121c556d46b3a3a1b75be120942c',
+    '/comicseries-imagedetails': 'e20c0690a7124b8abba1e004e04415be',
+    '/comicseries-contentrating': 'a740d9ff98324542a1b7a6ec03e609ae',
+    '/comicseries-comicseriestype': '6c51130eb3cd43c0be27de5cfc61d376',
+    '/comicseries-language': 'a690b02a1d41497387f50c9076e49c84',
+    '/creator-date': 'ea45186790894b0989f111f95a08b4db',
+    '/creator-linkdetails': 'b56452493fbc4d04914e6bdcf0bb806b',
+    '/creator-imagedetails': '562dc3abd57d4d56b737570fb30ea273',
+    '/creator-country': '297dae67f6cf46cabf31d8dfc3735c4b',
+    '/creator-contentrole': '6360b121b5064b92b941b100ba1fb60e',
   },
   // pageUrlOverrides: null,
 
