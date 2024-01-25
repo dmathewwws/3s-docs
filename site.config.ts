@@ -58,6 +58,9 @@ export default siteConfig({
     '/creator-imagedetails': '562dc3abd57d4d56b737570fb30ea273',
     '/creator-country': '297dae67f6cf46cabf31d8dfc3735c4b',
     '/creator-contentrole': '6360b121b5064b92b941b100ba1fb60e',
+    '/hosting-provider-date': '3c6ba95f399f4400920831e39ea564fc',
+    '/hosting-provider-oauth': '1fe171bbefaf46db880244635988ae5a',
+    '/supported-apps': 'abd87af85dbd45c09ba686d9c73288c6',
   },
   // pageUrlOverrides: null,
 
