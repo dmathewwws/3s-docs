@@ -71,7 +71,8 @@ export const NotionPageHeader: React.FC<{
                     key={index}
                     className={cs(styles.navLink, 'breadcrumb', 'button')}
                   >
-                    {link.title}
+                    {link.icon && <img src={link.icon} alt={link.title} width="20" height="20" />}
+                    &nbsp;&nbsp;{link.title}
                   </components.Link>
                 )
               }
@@ -79,7 +80,6 @@ export const NotionPageHeader: React.FC<{
             .filter(Boolean)}
 
           <ToggleThemeButton />
-
           {isSearchEnabled && <Search block={block} title={null} />}
         </div>
       </div>
