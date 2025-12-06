@@ -1,6 +1,4 @@
-import * as React from 'react'
-
-export const Footer: React.FC = () => {
+export function Footer() {
   return (
     <div/>
   )
