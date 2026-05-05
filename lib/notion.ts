@@ -12,7 +12,7 @@ import {
   navigationLinks,
   navigationStyle
 } from './config'
-import { getTweetsMap } from './get-tweets'
+import { normalizeRecordMap } from './normalize-record-map'
 import { notion } from './notion-api'
 import { getPreviewImageMap } from './preview-images'
 
@@ -43,7 +43,7 @@ const getNavigationLinkPages = pMemoize(
 )
 
 export async function getPage(pageId: string): Promise<ExtendedRecordMap> {
-  let recordMap = await notion.getPage(pageId)
+  let recordMap = normalizeRecordMap(await notion.getPage(pageId))
 
   if (navigationStyle !== 'default') {
     // ensure that any pages linked to in the custom navigation header have
@@ -54,7 +54,7 @@ export async function getPage(pageId: string): Promise<ExtendedRecordMap> {
     if (navigationLinkRecordMaps?.length) {
       recordMap = navigationLinkRecordMaps.reduce(
         (map, navigationLinkRecordMap) =>
-          mergeRecordMaps(map, navigationLinkRecordMap),
+          mergeRecordMaps(map, normalizeRecordMap(navigationLinkRecordMap)),
         recordMap
       )
     }
@@ -64,8 +64,6 @@ export async function getPage(pageId: string): Promise<ExtendedRecordMap> {
     const previewImageMap = await getPreviewImageMap(recordMap)
     ;(recordMap as any).preview_images = previewImageMap
   }
-
-  await getTweetsMap(recordMap)
 
   return recordMap
 }

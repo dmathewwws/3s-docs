@@ -13,9 +13,11 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "cross-env NODE_ENV=production tsx scripts/generate-static-files.ts",
     "build": "next build",
     "start": "next start",
-    "deploy": "vercel deploy",
+    "preview": "npx serve out",
+    "deploy": "wrangler pages deploy out --project-name=3s-docs --branch=main",
     "deps:upgrade": "[ -z $GITHUB_ACTIONS ] && pnpm up -L notion-client notion-types notion-utils react-notion-x || echo 'Skipping deps:update on CI'",
     "deps:link": "[ -z $GITHUB_ACTIONS ] && run-s deps:link:* || echo 'Skipping deps:update on CI'",
     "deps:unlink": "[ -z $GITHUB_ACTIONS ] && pnpm add notion-client notion-types notion-utils react-notion-x || echo 'Skipping deps:update on CI'",
@@ -33,11 +35,9 @@
   "dependencies": {
     "@fisch0920/use-dark-mode": "^2.4.0",
     "@keyvhq/core": "^1.6.26",
-    "@keyvhq/redis": "^1.6.28",
     "@react-icons/all-files": "^4.1.0",
     "classnames": "^2.5.1",
     "expiry-map": "^2.0.0",
-    "fathom-client": "^3.7.2",
     "ky": "^1.14.1",
     "lqip-modern": "^2.2.1",
     "next": "^15.5.9",
@@ -46,13 +46,11 @@
     "notion-utils": "^7.7.3",
     "p-map": "^7.0.4",
     "p-memoize": "^7.1.1",
-    "posthog-js": "^1.309.1",
     "prismjs": "^1.30.0",
     "react": "^19.2.3",
     "react-body-classname": "^1.3.1",
     "react-dom": "^19.2.3",
     "react-notion-x": "^7.7.3",
-    "react-tweet": "^3.3.0",
     "react-use": "^17.6.0",
     "rss": "^1.2.2"
   },
@@ -68,7 +66,9 @@
     "eslint": "^9.39.2",
     "npm-run-all2": "^8.0.4",
     "prettier": "^3.7.4",
-    "typescript": "^5.9.3"
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.30.0"
   },
   "overrides": {
     "cacheable-request": {
